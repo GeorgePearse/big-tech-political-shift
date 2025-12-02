@@ -93,19 +93,15 @@ h1 {
 .intro-article a {
     color: var(--text-secondary);
     text-decoration: none;
-    transition: color 0.3s, text-shadow 0.3s;
-    border-radius: 2px;
-    padding: 0 2px;
-    margin: 0 -2px;
+    transition: color 0.2s, text-shadow 0.2s;
 }
 
 .intro-article a:hover {
     color: #f59e0b;
     text-shadow:
-        0 0 4px rgba(245, 158, 11, 0.4),
-        0 0 8px rgba(245, 158, 11, 0.3),
-        0 0 16px rgba(245, 158, 11, 0.2),
-        0 0 32px rgba(245, 158, 11, 0.1);
+        0 0 8px rgba(245, 158, 11, 0.6),
+        0 0 20px rgba(245, 158, 11, 0.4),
+        0 0 40px rgba(245, 158, 11, 0.2);
 }
 
 .intro-quote {
@@ -663,19 +659,15 @@ h1 {
 .implications-content a {
     color: var(--text-secondary);
     text-decoration: none;
-    transition: color 0.3s, text-shadow 0.3s;
-    border-radius: 2px;
-    padding: 0 2px;
-    margin: 0 -2px;
+    transition: color 0.2s, text-shadow 0.2s;
 }
 
 .implications-content a:hover {
     color: #f59e0b;
     text-shadow:
-        0 0 4px rgba(245, 158, 11, 0.4),
-        0 0 8px rgba(245, 158, 11, 0.3),
-        0 0 16px rgba(245, 158, 11, 0.2),
-        0 0 32px rgba(245, 158, 11, 0.1);
+        0 0 8px rgba(245, 158, 11, 0.6),
+        0 0 20px rgba(245, 158, 11, 0.4),
+        0 0 40px rgba(245, 158, 11, 0.2);
 }
 
 /* Methodology */
