@@ -236,28 +236,34 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Render major event vertical lines
-    function renderMajorEvents() {
+    // Render major events as chip strip below timeline
+    function renderEventsStrip() {
         if (typeof majorEvents === 'undefined') return;
 
-        const timelinePointsEl = document.getElementById('timeline-points');
+        const eventsStrip = document.getElementById('events-strip');
+        if (!eventsStrip) return;
 
         majorEvents.forEach(event => {
-            const eventDate = new Date(event.date);
-            const xPercent = ((eventDate - startDate) / totalMs) * 100;
+            const chip = document.createElement('div');
+            chip.className = 'event-chip';
+            chip.style.setProperty('--event-color', event.color);
 
-            const eventLine = document.createElement('div');
-            eventLine.className = 'major-event-line';
-            eventLine.style.left = `${xPercent}%`;
-            eventLine.style.setProperty('--event-color', event.color);
+            const dot = document.createElement('span');
+            dot.className = 'event-chip-dot';
 
             const label = document.createElement('span');
-            label.className = 'major-event-label';
             label.textContent = event.label;
-            label.style.backgroundColor = event.color;
-            eventLine.appendChild(label);
 
-            timelinePointsEl.appendChild(eventLine);
+            const date = document.createElement('span');
+            date.className = 'event-chip-date';
+            const eventDate = new Date(event.date);
+            date.textContent = eventDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+
+            chip.appendChild(dot);
+            chip.appendChild(label);
+            chip.appendChild(date);
+
+            eventsStrip.appendChild(chip);
         });
     }
 
@@ -343,8 +349,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Initialize
     renderThroughlines();  // Render first so they appear behind everything
-    renderMajorEvents();
     renderYearMarkers();
     renderXAxis();
     renderDataPoints();
+    renderEventsStrip();
 });
