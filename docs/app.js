@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Render major events as chip strip below timeline
+    // Render major events as positioned dots below x-axis
     function renderEventsStrip() {
         if (typeof majorEvents === 'undefined') return;
 
@@ -244,24 +244,23 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!eventsStrip) return;
 
         majorEvents.forEach(event => {
+            const eventDate = new Date(event.date);
+            const xPercent = ((eventDate - startDate) / totalMs) * 100;
+
             const chip = document.createElement('div');
             chip.className = 'event-chip';
+            chip.style.left = `${xPercent}%`;
             chip.style.setProperty('--event-color', event.color);
 
             const dot = document.createElement('span');
             dot.className = 'event-chip-dot';
 
             const label = document.createElement('span');
+            label.className = 'event-chip-label';
             label.textContent = event.label;
-
-            const date = document.createElement('span');
-            date.className = 'event-chip-date';
-            const eventDate = new Date(event.date);
-            date.textContent = eventDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
 
             chip.appendChild(dot);
             chip.appendChild(label);
-            chip.appendChild(date);
 
             eventsStrip.appendChild(chip);
         });
