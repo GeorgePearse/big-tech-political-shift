@@ -236,7 +236,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Render major event vertical lines
+    function renderMajorEvents() {
+        if (typeof majorEvents === 'undefined') return;
+
+        const timelineEl = document.getElementById('timeline');
+
+        majorEvents.forEach(event => {
+            const eventDate = new Date(event.date);
+            const xPercent = ((eventDate - startDate) / totalMs) * 100;
+
+            const eventLine = document.createElement('div');
+            eventLine.className = 'major-event-line';
+            eventLine.style.left = `calc(80px + ${xPercent}% * (100% - 160px) / 100)`;
+            eventLine.style.setProperty('--event-color', event.color);
+
+            const label = document.createElement('span');
+            label.className = 'major-event-label';
+            label.textContent = event.label;
+            label.style.backgroundColor = event.color;
+            eventLine.appendChild(label);
+
+            timelineEl.appendChild(eventLine);
+        });
+    }
+
     // Initialize
+    renderMajorEvents();
     renderYearMarkers();
     renderXAxis();
     renderDataPoints();

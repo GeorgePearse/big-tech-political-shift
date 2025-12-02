@@ -57,6 +57,16 @@ const timelineData = [
         switchEvent: "Announced he would vote Republican, began political shift accelerating through Twitter acquisition",
         company: "Tesla, SpaceX, X (Twitter)",
         bio: "The megaphone. COVID restrictions triggered shift. Bought Twitter, made it MAGA platform. Spent $100M+ on Trump 2024. Faced largest potential unrealized gains tax bill of any American. Now runs DOGE.",
+        timeline: [
+            { date: "2020-03-19", event: "Tweets 'coronavirus panic is dumb'", type: "tweet" },
+            { date: "2020-05-11", event: "Defies Alameda County lockdown, reopens Tesla factory", type: "action" },
+            { date: "2021-12-22", event: "Moves Tesla HQ from California to Texas", type: "action" },
+            { date: "2022-04-14", event: "Offers to buy Twitter for $44B", type: "action" },
+            { date: "2022-10-27", event: "Completes Twitter acquisition, fires executives", type: "action" },
+            { date: "2023-11-17", event: "Endorses antisemitic tweet, advertisers flee", type: "tweet" },
+            { date: "2024-07-13", event: "Formally endorses Trump after assassination attempt", type: "endorsement" },
+            { date: "2024-10-19", event: "$1M daily giveaway to swing state voters begins", type: "action" }
+        ],
         articles: [
             {
                 title: "Elon Musk says he'll vote Republican",
@@ -100,6 +110,12 @@ const timelineData = [
         switchEvent: "Published 'Techno-Optimist Manifesto' explicitly naming DEI, ESG as enemies",
         company: "Andreessen Horowitz (a16z)",
         bio: "The ideologist. Netscape founder. Manifesto declared war on 'woke'. 'Little Tech Agenda' called Harris unrealized gains tax 'the death of startups'. Explicit Trump endorsement.",
+        timeline: [
+            { date: "2021-06-04", event: "Tweets against 'woke capitalism' trend", type: "tweet" },
+            { date: "2023-06-06", event: "AI blog post criticizes 'doomers' and regulation", type: "article" },
+            { date: "2024-07-15", event: "Publishes 'Little Tech Agenda' attacking Harris tax plan", type: "article" },
+            { date: "2024-07-16", event: "Officially endorses Trump with Ben Horowitz", type: "endorsement" }
+        ],
         articles: [
             {
                 title: "The Techno-Optimist Manifesto",
@@ -376,3 +392,17 @@ const timelineConfig = {
     minDate: new Date("2016-01-01"),
     maxDate: new Date("2025-12-31")
 };
+
+// Major events shown as vertical lines across the timeline
+const majorEvents = [
+    { date: "2016-11-08", label: "Trump elected", color: "#dc2626" },
+    { date: "2020-03-13", label: "COVID emergency", color: "#f59e0b" },
+    { date: "2020-11-03", label: "Biden elected", color: "#3b82f6" },
+    { date: "2021-01-06", label: "Jan 6 Capitol riot", color: "#dc2626" },
+    { date: "2022-10-27", label: "Musk buys Twitter", color: "#8b5cf6" },
+    { date: "2024-07-13", label: "Trump assassination attempt", color: "#dc2626" },
+    { date: "2024-08-22", label: "Harris nominated", color: "#3b82f6" },
+    { date: "2024-08-28", label: "Harris unrealized gains tax proposal", color: "#f59e0b" },
+    { date: "2024-11-05", label: "Trump wins 2024", color: "#dc2626" },
+    { date: "2025-01-20", label: "Trump inaugurated", color: "#dc2626" }
+];
