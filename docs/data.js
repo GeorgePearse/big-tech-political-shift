@@ -268,32 +268,13 @@ const timelineData = [
         ]
     },
     {
-        id: "sundar-pichai",
-        name: "Sundar Pichai",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Sundar_Pichai_-_2023_%28cropped%29.jpg/440px-Sundar_Pichai_-_2023_%28cropped%29.jpg",
-        role: "Alphabet/Google CEO",
-        type: "ceo",
-        switchDate: "2024-12-12",
-        switchRank: 11,
-        switchEvent: "Met with Trump at Mar-a-Lago as part of tech CEO outreach",
-        company: "Alphabet (Google, YouTube)",
-        bio: "The quiet pivot. From employee walkout days to firing Palestine protesters. Lost antitrust case, needs Trump DOJ leniency.",
-        articles: [
-            {
-                title: "Google CEO Sundar Pichai Meets With Trump",
-                url: "https://www.reuters.com/technology/google-ceo-pichai-meets-with-trump-transition-team-2024-12-13/",
-                source: "Reuters"
-            }
-        ]
-    },
-    {
         id: "tim-cook",
         name: "Tim Cook",
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/P20250806MR-0248_President_Donald_Trump_delivers_investment_remarks_alongside_Apple_CEO_Tim_Cook_%28cropped%29.jpg/440px-P20250806MR-0248_President_Donald_Trump_delivers_investment_remarks_alongside_Apple_CEO_Tim_Cook_%28cropped%29.jpg",
         role: "Apple CEO",
         type: "ceo",
         switchDate: "2025-01-20",
-        switchRank: 12,
+        switchRank: 11,
         switchEvent: "Attended Trump inauguration in prominent position",
         company: "Apple",
         bio: "The survivor. Has worked with every administration. Inauguration attendance despite privacy/values marketing. China business priority.",
@@ -306,32 +287,13 @@ const timelineData = [
         ]
     },
     {
-        id: "satya-nadella",
-        name: "Satya Nadella",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/MS-Exec-Nadella-Satya-2017-08-31-22_%28cropped%29.jpg/440px-MS-Exec-Nadella-Satya-2017-08-31-22_%28cropped%29.jpg",
-        role: "Microsoft CEO",
-        type: "ceo",
-        switchDate: "2025-01-20",
-        switchRank: 13,
-        switchEvent: "Attended Trump inauguration",
-        company: "Microsoft",
-        bio: "The pragmatist. Less dramatic than others. Azure government contracts matter. Quiet alignment over confrontation.",
-        articles: [
-            {
-                title: "Tech Billionaires at Trump Inauguration",
-                url: "https://www.bbc.com/news/articles/c62505z45g5o",
-                source: "BBC"
-            }
-        ]
-    },
-    {
         id: "sam-altman",
         name: "Sam Altman",
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Sam_Altman_TechCrunch_SF_2019_Day_2_Oct_3_%28cropped%29.jpg/440px-Sam_Altman_TechCrunch_SF_2019_Day_2_Oct_3_%28cropped%29.jpg",
         role: "OpenAI CEO",
         type: "ceo",
         switchDate: "2025-01-20",
-        switchRank: 14,
+        switchRank: 12,
         switchEvent: "Donated $1M personally to Trump inauguration fund, attended ceremony",
         company: "OpenAI",
         bio: "The AI kingmaker. Built ChatGPT empire. Personal $1M inauguration donation despite OpenAI's nonprofit origins. Needs regulatory favor for AGI ambitions.",
@@ -355,7 +317,7 @@ const timelineData = [
         role: "TikTok CEO",
         type: "ceo",
         switchDate: "2025-01-20",
-        switchRank: 15,
+        switchRank: 13,
         switchEvent: "Attended Trump inauguration days before potential TikTok ban, seated prominently",
         company: "TikTok (ByteDance)",
         bio: "The desperate diplomat. Singaporean CEO fighting US ban. Testified to Congress twice. Trump inauguration seat was survival politics—ban delayed 75 days after.",
@@ -403,7 +365,7 @@ const timelineData = [
         role: "Uber CEO",
         type: "ceo",
         switchDate: "2025-01-20",
-        switchRank: 16,
+        switchRank: 14,
         switchEvent: "Attended Trump inauguration",
         company: "Uber",
         bio: "The pragmatic immigrant. Iranian-American CEO. Quietly attended inauguration despite Trump's past immigration policies. Gig economy regulation stakes.",
