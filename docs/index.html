@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Big Tech's Political Shift - Timeline</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Big Tech's Political Realignment</h1>
+            <p class="subtitle">From Democratic donors to Trump supporters: A timeline of Silicon Valley's rightward shift</p>
+        </header>
+
+        <div class="legend">
+            <div class="legend-item">
+                <span class="legend-dot ceo"></span>
+                <span>CEO / Founder</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-dot vc"></span>
+                <span>Investor / VC</span>
+            </div>
+            <div class="legend-item">
+                <span class="legend-dot influencer"></span>
+                <span>Influencer / Media</span>
+            </div>
+        </div>
+
+        <div class="timeline-container">
+            <div class="timeline-header">
+                <div class="y-axis-label">← First to switch</div>
+                <div class="y-axis-label-bottom">Last to switch →</div>
+            </div>
+
+            <div class="timeline" id="timeline">
+                <!-- Timeline axis -->
+                <div class="timeline-axis" id="timeline-axis"></div>
+
+                <!-- Data points will be rendered here by JS -->
+                <div class="timeline-points" id="timeline-points"></div>
+            </div>
+
+            <div class="x-axis" id="x-axis">
+                <!-- Year labels rendered by JS -->
+            </div>
+        </div>
+
+        <!-- Tooltip -->
+        <div class="tooltip" id="tooltip">
+            <div class="tooltip-header">
+                <span class="tooltip-name"></span>
+                <span class="tooltip-role"></span>
+            </div>
+            <div class="tooltip-date"></div>
+            <div class="tooltip-event"></div>
+            <div class="tooltip-links"></div>
+        </div>
+
+        <!-- Detail panel -->
+        <div class="detail-panel" id="detail-panel">
+            <button class="close-btn" id="close-panel">&times;</button>
+            <div class="detail-content" id="detail-content"></div>
+        </div>
+
+        <section class="context">
+            <h2>The Pattern</h2>
+            <div class="context-grid">
+                <div class="context-card">
+                    <h3>Early Movers (Pre-2020)</h3>
+                    <p>Peter Thiel and contrarian figures who never aligned with progressive tech culture. The ideological vanguard.</p>
+                </div>
+                <div class="context-card">
+                    <h3>COVID Era Converts (2020-2022)</h3>
+                    <p>Musk, Andreessen, Sacks—radicalized by pandemic restrictions and progressive employee activism.</p>
+                </div>
+                <div class="context-card">
+                    <h3>2024 Pragmatists</h3>
+                    <p>Zuckerberg, Bezos, Pichai—regulatory pressure and business calculation drove late-stage alignment.</p>
+                </div>
+                <div class="context-card">
+                    <h3>Inauguration Conformists (2025)</h3>
+                    <p>Cook and others who simply followed power, attending Trump's inauguration regardless of prior positions.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="methodology">
+            <h2>Methodology</h2>
+            <p>"Switch date" is defined as the first public action demonstrating clear Republican/Trump alignment: endorsement, major donation, policy reversal, or attendance at key Trump events. Vertical position reflects the chronological order of switching, with earliest at top.</p>
+        </section>
+
+        <footer>
+            <p>Research repository: <a href="https://github.com/GeorgePearse/big-tech-political-shift" target="_blank">github.com/GeorgePearse/big-tech-political-shift</a></p>
+            <p>Open source research project documenting tech's political realignment.</p>
+        </footer>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
