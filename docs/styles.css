@@ -758,3 +758,98 @@ footer a:hover {
     background: rgba(139, 92, 246, 0.2);
     color: var(--vc-color);
 }
+
+/* Horizontal throughlines for each person */
+.person-throughline {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, transparent 0%, var(--line-color, #666) 10%, var(--line-color, #666) 100%);
+    opacity: 0.3;
+    z-index: 0;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+
+.person-throughline.ceo {
+    --line-color: var(--ceo-color);
+}
+
+.person-throughline.vc {
+    --line-color: var(--vc-color);
+}
+
+/* Event markers on throughlines */
+.timeline-event-marker {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--marker-color, #666);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 5;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.timeline-event-marker:hover {
+    transform: translate(-50%, -50%) scale(1.5);
+    box-shadow: 0 0 10px var(--marker-color, #666);
+    z-index: 10;
+}
+
+.timeline-event-marker.tweet {
+    --marker-color: #1da1f2;
+}
+
+.timeline-event-marker.action {
+    --marker-color: var(--ceo-color);
+}
+
+.timeline-event-marker.endorsement {
+    --marker-color: var(--accent-red);
+}
+
+.timeline-event-marker.article {
+    --marker-color: #10b981;
+}
+
+/* Event marker tooltip */
+.event-marker-tooltip {
+    position: fixed;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.75rem;
+    max-width: 280px;
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+    font-size: 0.8rem;
+}
+
+.event-marker-tooltip.visible {
+    opacity: 1;
+}
+
+.event-marker-tooltip .event-date {
+    color: var(--text-muted);
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+}
+
+.event-marker-tooltip .event-text {
+    color: var(--text-primary);
+}
+
+.event-marker-tooltip .event-type {
+    display: inline-block;
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.6rem;
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+    background: var(--bg-secondary);
+    color: var(--text-muted);
+}

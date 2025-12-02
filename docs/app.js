@@ -261,7 +261,88 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Create event marker tooltip
+    const eventMarkerTooltip = document.createElement('div');
+    eventMarkerTooltip.className = 'event-marker-tooltip';
+    eventMarkerTooltip.innerHTML = `
+        <div class="event-date"></div>
+        <div class="event-text"></div>
+        <span class="event-type"></span>
+    `;
+    document.body.appendChild(eventMarkerTooltip);
+
+    // Show event marker tooltip
+    function showEventMarkerTooltip(e, event, personName) {
+        const rect = e.target.getBoundingClientRect();
+
+        eventMarkerTooltip.querySelector('.event-date').textContent =
+            `${personName} · ${formatDate(event.date)}`;
+        eventMarkerTooltip.querySelector('.event-text').textContent = event.event;
+        eventMarkerTooltip.querySelector('.event-type').textContent = event.type;
+
+        let left = rect.right + 10;
+        let top = rect.top - 10;
+
+        if (left + 280 > window.innerWidth) {
+            left = rect.left - 290;
+        }
+        if (top + 100 > window.innerHeight) {
+            top = window.innerHeight - 110;
+        }
+        if (top < 10) top = 10;
+
+        eventMarkerTooltip.style.left = `${left}px`;
+        eventMarkerTooltip.style.top = `${top}px`;
+        eventMarkerTooltip.classList.add('visible');
+    }
+
+    // Hide event marker tooltip
+    function hideEventMarkerTooltip() {
+        eventMarkerTooltip.classList.remove('visible');
+    }
+
+    // Render horizontal throughlines for each person
+    function renderThroughlines() {
+        const timelinePointsEl = document.getElementById('timeline-points');
+
+        timelineData.forEach(person => {
+            const switchXPercent = getXPosition(person.switchDate);
+            const yPos = getYPosition(person.switchRank);
+
+            // Create throughline from left edge to switch point
+            const throughline = document.createElement('div');
+            throughline.className = `person-throughline ${person.type}`;
+            throughline.style.left = '0%';
+            throughline.style.width = `${switchXPercent}%`;
+            throughline.style.top = `${yPos}%`;
+
+            timelinePointsEl.appendChild(throughline);
+
+            // If person has timeline events, add markers
+            if (person.timeline && person.timeline.length > 0) {
+                person.timeline.forEach(event => {
+                    const eventXPercent = getXPosition(event.date);
+
+                    // Only show events before or at switch date
+                    if (eventXPercent <= switchXPercent + 5) {
+                        const marker = document.createElement('div');
+                        marker.className = `timeline-event-marker ${event.type}`;
+                        marker.style.left = `${eventXPercent}%`;
+                        marker.style.top = `${yPos}%`;
+
+                        marker.addEventListener('mouseenter', (e) =>
+                            showEventMarkerTooltip(e, event, person.name));
+                        marker.addEventListener('mouseleave', hideEventMarkerTooltip);
+
+                        timelinePointsEl.appendChild(marker);
+                    }
+                });
+            }
+        });
+    }
+
     // Initialize
+    renderThroughlines();  // Render first so they appear behind everything
     renderMajorEvents();
     renderYearMarkers();
     renderXAxis();

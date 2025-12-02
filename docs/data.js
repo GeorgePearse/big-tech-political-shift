@@ -14,6 +14,13 @@ const timelineData = [
         switchEvent: "RNC convention speech endorsing Trump - only major tech figure to support him",
         company: "Palantir, Founders Fund",
         bio: "The original. Anti-DEI since 1995's 'Diversity Myth'. Funded JD Vance (now VP). Never wavered from contrarian right position.",
+        timeline: [
+            { date: "1995-09-01", event: "Co-authors 'The Diversity Myth' criticizing multiculturalism at Stanford", type: "article" },
+            { date: "2009-04-13", event: "Writes 'I no longer believe democracy and freedom are compatible'", type: "article" },
+            { date: "2011-01-01", event: "Funds JD Vance's law school education", type: "action" },
+            { date: "2016-05-25", event: "Revealed as secret funder of Hulk Hogan lawsuit against Gawker", type: "action" },
+            { date: "2016-07-21", event: "Delivers primetime RNC speech endorsing Trump", type: "endorsement" }
+        ],
         articles: [
             {
                 title: "Peter Thiel's RNC Speech",
@@ -91,6 +98,12 @@ const timelineData = [
         switchEvent: "All-In podcast became increasingly political, anti-Democratic positioning",
         company: "Craft Ventures, PayPal (former)",
         bio: "Co-authored 'The Diversity Myth' with Thiel in 1995. All-In podcast political vehicle. Hosted Trump fundraiser. Now 'AI/Crypto Czar'.",
+        timeline: [
+            { date: "1995-09-01", event: "Co-authors 'The Diversity Myth' with Peter Thiel", type: "article" },
+            { date: "2021-04-01", event: "All-In podcast launches, gains tech audience", type: "action" },
+            { date: "2022-03-01", event: "Begins regular anti-woke commentary on All-In", type: "tweet" },
+            { date: "2024-06-06", event: "Hosts Trump fundraiser at his SF mansion", type: "action" }
+        ],
         articles: [
             {
                 title: "David Sacks to Host Trump Fundraiser in San Francisco",
@@ -150,6 +163,12 @@ const timelineData = [
         switchEvent: "Increasingly right-wing podcast positions, Vivek Ramaswamy alliance",
         company: "Social Capital",
         bio: "The provocateur. Former Facebook exec who criticized it. SPAC disasters. 'Nobody cares about Uyghurs' comments. All-In radicalization.",
+        timeline: [
+            { date: "2017-11-13", event: "Criticizes Facebook for 'ripping apart social fabric'", type: "tweet" },
+            { date: "2022-01-15", event: "'Nobody cares about Uyghurs' comment on All-In", type: "tweet" },
+            { date: "2023-09-01", event: "Backs Vivek Ramaswamy for president", type: "endorsement" },
+            { date: "2024-01-15", event: "Declares himself politically independent, attacks 'woke'", type: "tweet" }
+        ],
         articles: [
             {
                 title: "Chamath Palihapitiya Says 'Nobody Cares' About Uyghurs",
@@ -193,6 +212,13 @@ const timelineData = [
         switchEvent: "Letter to Jim Jordan regretting COVID 'censorship', signaling major policy shift",
         company: "Meta (Facebook, Instagram, WhatsApp)",
         bio: "The transformation. From Trump ban to Mar-a-Lago dinner. Killed DEI, fact-checking. 'Masculine energy' comments. $1M inaugural donation.",
+        timeline: [
+            { date: "2021-01-07", event: "Bans Trump from Facebook indefinitely after Jan 6", type: "action" },
+            { date: "2023-01-25", event: "Reinstates Trump's Facebook account", type: "action" },
+            { date: "2024-08-26", event: "Letter to Congress regretting COVID content moderation", type: "article" },
+            { date: "2024-11-13", event: "Has dinner with Trump at Mar-a-Lago", type: "action" },
+            { date: "2025-01-07", event: "Ends fact-checking, announces 'masculine energy' focus", type: "action" }
+        ],
         articles: [
             {
                 title: "Zuckerberg Says White House Pressured Facebook on Covid Posts",
@@ -222,6 +248,12 @@ const timelineData = [
         switchEvent: "Blocked Washington Post from endorsing Kamala Harris, breaking tradition",
         company: "Amazon, Blue Origin, Washington Post",
         bio: "The pragmatist. Blocked his own newspaper's endorsement. Attended inauguration. AWS government contracts a factor.",
+        timeline: [
+            { date: "2019-02-07", event: "Publishes Medium post accusing National Enquirer of blackmail", type: "article" },
+            { date: "2021-07-20", event: "Blue Origin launches him to space", type: "action" },
+            { date: "2024-10-25", event: "Blocks WaPo Harris endorsement, staff revolt", type: "action" },
+            { date: "2024-10-28", event: "Defends decision in op-ed about media trust", type: "article" }
+        ],
         articles: [
             {
                 title: "Washington Post Won't Endorse in Presidential Race",
