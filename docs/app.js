@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const marker = document.createElement('div');
             marker.className = 'year-marker';
-            marker.style.left = `calc(60px + ${xPercent}% * (100% - 120px) / 100)`;
+            marker.style.left = `calc(80px + ${xPercent}% * (100% - 160px) / 100)`;
 
             const label = document.createElement('span');
             label.className = 'year-marker-label';
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Render X axis labels
     function renderXAxis() {
-        for (let year = timelineConfig.startYear; year <= timelineConfig.endYear; year += 2) {
+        for (let year = timelineConfig.startYear; year <= timelineConfig.endYear; year++) {
             const label = document.createElement('div');
             label.className = 'x-axis-label';
             label.textContent = year;
@@ -60,18 +60,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Calculate Y position from rank (1 = top, higher = bottom)
+    // Spread out evenly across the full height
     function getYPosition(rank) {
-        // Leave some padding at top and bottom
-        const paddingPercent = 10;
+        // Use full range with minimal padding
+        const paddingPercent = 5;
         const usableRange = 100 - (paddingPercent * 2);
         return paddingPercent + ((rank - 1) / (totalPeople - 1)) * usableRange;
     }
 
-    // Render data points
+    // Render data points with photos
     function renderDataPoints() {
         timelineData.forEach(person => {
             const point = document.createElement('div');
-            point.className = `data-point ${person.type}`;
+            point.className = `data-point ${person.type} loading`;
             point.dataset.id = person.id;
 
             const xPos = getXPosition(person.switchDate);
@@ -79,12 +80,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
             point.style.left = `${xPos}%`;
             point.style.top = `${yPos}%`;
-            point.innerHTML = person.emoji;
+
+            // Create image element
+            const img = document.createElement('img');
+            img.src = person.image;
+            img.alt = person.name;
+            img.loading = 'lazy';
+
+            // Remove loading class when image loads
+            img.onload = () => {
+                point.classList.remove('loading');
+            };
+
+            // Fallback if image fails
+            img.onerror = () => {
+                point.classList.remove('loading');
+                img.style.display = 'none';
+                point.innerHTML = `<span style="font-size: 1.2rem;">${person.name.charAt(0)}</span>`;
+            };
+
+            point.appendChild(img);
 
             // Add label
             const label = document.createElement('span');
             label.className = 'data-point-label';
-            label.textContent = person.name.split(' ')[1] || person.name.split(' ')[0];
+            label.textContent = person.name;
             point.appendChild(label);
 
             // Event listeners
@@ -106,20 +126,32 @@ document.addEventListener('DOMContentLoaded', function() {
         tooltip.querySelector('.tooltip-event').textContent = person.switchEvent;
 
         const linksHtml = person.articles.slice(0, 2).map(a =>
-            `<a href="${a.url}" target="_blank">${a.source}</a>`
+            `<a href="${a.url}" target="_blank" rel="noopener">${a.source}</a>`
         ).join(' · ');
         tooltip.querySelector('.tooltip-links').innerHTML = linksHtml ? `Sources: ${linksHtml}` : '';
 
         // Position tooltip
-        let left = rect.right + 10;
-        let top = rect.top;
+        let left = rect.right + 15;
+        let top = rect.top - 20;
 
-        // Check if tooltip would go off screen
-        if (left + 320 > window.innerWidth) {
-            left = rect.left - 330;
+        // Check if tooltip would go off screen right
+        if (left + 350 > window.innerWidth) {
+            left = rect.left - 365;
         }
-        if (top + 200 > window.innerHeight) {
-            top = window.innerHeight - 210;
+
+        // Check if tooltip would go off screen left
+        if (left < 10) {
+            left = 10;
+        }
+
+        // Check if tooltip would go off screen bottom
+        if (top + 250 > window.innerHeight) {
+            top = window.innerHeight - 260;
+        }
+
+        // Check if tooltip would go off screen top
+        if (top < 10) {
+            top = 10;
         }
 
         tooltip.style.left = `${left}px`;
@@ -135,16 +167,27 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show detail panel
     function showDetailPanel(person) {
         const articlesHtml = person.articles.map(a => `
-            <a href="${a.url}" target="_blank" class="article-link">
+            <a href="${a.url}" target="_blank" rel="noopener" class="article-link">
                 ${a.title}
                 <span class="source">${a.source}</span>
             </a>
         `).join('');
 
+        const typeLabel = person.type === 'ceo' ? 'CEO / Founder' : 'Investor / VC';
+        const typeBadgeClass = person.type;
+
         detailContent.innerHTML = `
-            <h2>${person.emoji} ${person.name}</h2>
-            <p class="role">${person.role}</p>
-            <p class="switch-date">Switch Date: ${formatDate(person.switchDate)}</p>
+            <div class="detail-header">
+                <img src="${person.image}" alt="${person.name}" class="detail-photo" onerror="this.style.display='none'">
+                <div>
+                    <h2>${person.name} <span class="type-badge ${typeBadgeClass}">${typeLabel}</span></h2>
+                    <p class="role">${person.role}</p>
+                </div>
+            </div>
+
+            <div class="switch-date">
+                <strong>Switch Date:</strong> ${formatDate(person.switchDate)}
+            </div>
 
             <h3>The Moment</h3>
             <p>${person.switchEvent}</p>
@@ -158,12 +201,13 @@ document.addEventListener('DOMContentLoaded', function() {
             <h3>Key Sources</h3>
             ${articlesHtml}
 
-            <h3>Profile</h3>
-            <p><a href="https://github.com/GeorgePearse/big-tech-political-shift/blob/main/analysis/individuals/${person.id}.md" target="_blank">View full research profile →</a></p>
+            <h3>Full Profile</h3>
+            <p><a href="https://github.com/GeorgePearse/big-tech-political-shift/blob/main/analysis/individuals/${person.id}.md" target="_blank" rel="noopener">View detailed research profile on GitHub →</a></p>
         `;
 
         detailPanel.classList.add('visible');
         overlay.classList.add('visible');
+        hideTooltip();
     }
 
     // Close detail panel

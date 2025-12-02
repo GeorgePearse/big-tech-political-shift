@@ -6,7 +6,7 @@ const timelineData = [
     {
         id: "peter-thiel",
         name: "Peter Thiel",
-        emoji: "🏛️",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Peter_Thiel_2014_%28cropped%29.jpg/440px-Peter_Thiel_2014_%28cropped%29.jpg",
         role: "Palantir Founder, Investor",
         type: "vc",
         switchDate: "2016-07-21",
@@ -30,7 +30,7 @@ const timelineData = [
     {
         id: "palmer-luckey",
         name: "Palmer Luckey",
-        emoji: "🥽",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Palmer_Luckey%2C_2015_%28cropped%29.jpg/440px-Palmer_Luckey%2C_2015_%28cropped%29.jpg",
         role: "Oculus Founder, Anduril CEO",
         type: "ceo",
         switchDate: "2016-09-22",
@@ -49,14 +49,14 @@ const timelineData = [
     {
         id: "elon-musk",
         name: "Elon Musk",
-        emoji: "🚀",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/440px-Elon_Musk_Royal_Society_%28crop2%29.jpg",
         role: "Tesla/SpaceX/X CEO",
         type: "ceo",
         switchDate: "2022-05-18",
         switchRank: 3,
         switchEvent: "Announced he would vote Republican, began political shift accelerating through Twitter acquisition",
         company: "Tesla, SpaceX, X (Twitter)",
-        bio: "The megaphone. COVID restrictions triggered shift. Bought Twitter, made it MAGA platform. Spent $100M+ on Trump 2024. Now runs DOGE.",
+        bio: "The megaphone. COVID restrictions triggered shift. Bought Twitter, made it MAGA platform. Spent $100M+ on Trump 2024. Faced largest potential unrealized gains tax bill of any American. Now runs DOGE.",
         articles: [
             {
                 title: "Elon Musk says he'll vote Republican",
@@ -73,7 +73,7 @@ const timelineData = [
     {
         id: "david-sacks",
         name: "David Sacks",
-        emoji: "🎙️",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/David_O._Sacks_in_2024_%28cropped%29.jpg/440px-David_O._Sacks_in_2024_%28cropped%29.jpg",
         role: "Craft Ventures, All-In Pod",
         type: "vc",
         switchDate: "2022-06-01",
@@ -92,14 +92,14 @@ const timelineData = [
     {
         id: "marc-andreessen",
         name: "Marc Andreessen",
-        emoji: "💰",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Marc_Andreessen-2.jpg/440px-Marc_Andreessen-2.jpg",
         role: "a16z Co-Founder",
         type: "vc",
         switchDate: "2023-10-16",
         switchRank: 5,
         switchEvent: "Published 'Techno-Optimist Manifesto' explicitly naming DEI, ESG as enemies",
         company: "Andreessen Horowitz (a16z)",
-        bio: "The ideologist. Netscape founder. Manifesto declared war on 'woke'. 'Little Tech Agenda' in 2024. Explicit Trump endorsement.",
+        bio: "The ideologist. Netscape founder. Manifesto declared war on 'woke'. 'Little Tech Agenda' called Harris unrealized gains tax 'the death of startups'. Explicit Trump endorsement.",
         articles: [
             {
                 title: "The Techno-Optimist Manifesto",
@@ -107,16 +107,26 @@ const timelineData = [
                 source: "a16z"
             },
             {
+                title: "The Little Tech Agenda",
+                url: "https://a16z.com/the-little-tech-agenda/",
+                source: "a16z"
+            },
+            {
                 title: "Why Andreessen Horowitz Is Betting on Trump",
                 url: "https://www.wired.com/story/andreessen-horowitz-trump-crypto/",
                 source: "Wired"
+            },
+            {
+                title: "Explaining Harris's 'unrealized' capital gains tax that billionaires hate",
+                url: "https://fortune.com/2024/08/31/kamala-unrealized-capital-gains-tax-meaning-proposal-explained/",
+                source: "Fortune"
             }
         ]
     },
     {
         id: "chamath",
         name: "Chamath Palihapitiya",
-        emoji: "🎤",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Chamath_Palihapitiya_in_2024.png/440px-Chamath_Palihapitiya_in_2024.png",
         role: "Social Capital, All-In Pod",
         type: "vc",
         switchDate: "2024-01-15",
@@ -135,26 +145,31 @@ const timelineData = [
     {
         id: "ben-horowitz",
         name: "Ben Horowitz",
-        emoji: "📈",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Ben_Horowitz%2C_2012_%28cropped%29.jpg/440px-Ben_Horowitz%2C_2012_%28cropped%29.jpg",
         role: "a16z Co-Founder",
         type: "vc",
         switchDate: "2024-07-16",
         switchRank: 7,
         switchEvent: "Co-endorsed Trump with Andreessen, despite historical Democratic donations",
         company: "Andreessen Horowitz (a16z)",
-        bio: "The reluctant convert. Previously donated to Democrats. Framed Trump support as narrow crypto policy issue. 'Little Tech Agenda' co-author.",
+        bio: "The reluctant convert. Previously donated to Democrats. Co-authored 'Little Tech Agenda' warning Harris tax would 'kill startups'. Framed Trump support as policy necessity.",
         articles: [
             {
                 title: "Ben Horowitz Explains Why He's Supporting Trump",
                 url: "https://www.youtube.com/watch?v=OXVGqcRLNnE",
                 source: "a16z YouTube"
+            },
+            {
+                title: "The Little Tech Agenda",
+                url: "https://a16z.com/the-little-tech-agenda/",
+                source: "a16z"
             }
         ]
     },
     {
         id: "mark-zuckerberg",
         name: "Mark Zuckerberg",
-        emoji: "👤",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg/440px-Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg",
         role: "Meta CEO",
         type: "ceo",
         switchDate: "2024-08-26",
@@ -183,7 +198,7 @@ const timelineData = [
     {
         id: "jeff-bezos",
         name: "Jeff Bezos",
-        emoji: "📦",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Jeff_Bezos_visits_LAAFB_SMC_%283908618%29_%28cropped%29.jpeg/440px-Jeff_Bezos_visits_LAAFB_SMC_%283908618%29_%28cropped%29.jpeg",
         role: "Amazon Founder, WaPo Owner",
         type: "ceo",
         switchDate: "2024-10-25",
@@ -207,7 +222,7 @@ const timelineData = [
     {
         id: "sundar-pichai",
         name: "Sundar Pichai",
-        emoji: "🔍",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Sundar_Pichai_-_2023_%28cropped%29.jpg/440px-Sundar_Pichai_-_2023_%28cropped%29.jpg",
         role: "Alphabet/Google CEO",
         type: "ceo",
         switchDate: "2024-12-12",
@@ -226,7 +241,7 @@ const timelineData = [
     {
         id: "tim-cook",
         name: "Tim Cook",
-        emoji: "🍎",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Tim_Cook_%282017%2C_cropped%29.jpg/440px-Tim_Cook_%282017%2C_cropped%29.jpg",
         role: "Apple CEO",
         type: "ceo",
         switchDate: "2025-01-20",
@@ -245,7 +260,7 @@ const timelineData = [
     {
         id: "satya-nadella",
         name: "Satya Nadella",
-        emoji: "🪟",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Satya_Nadella_2023_%28cropped%29.jpg/440px-Satya_Nadella_2023_%28cropped%29.jpg",
         role: "Microsoft CEO",
         type: "ceo",
         switchDate: "2025-01-20",
