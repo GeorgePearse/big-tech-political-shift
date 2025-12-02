@@ -6,7 +6,7 @@ const timelineData = [
     {
         id: "peter-thiel",
         name: "Peter Thiel",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Peter_Thiel_2014_%28cropped%29.jpg/440px-Peter_Thiel_2014_%28cropped%29.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Peter_Thiel_by_Gage_Skidmore.jpg/440px-Peter_Thiel_by_Gage_Skidmore.jpg",
         role: "Palantir Founder, Investor",
         type: "vc",
         switchDate: "2016-07-21",
@@ -30,7 +30,7 @@ const timelineData = [
     {
         id: "palmer-luckey",
         name: "Palmer Luckey",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Palmer_Luckey%2C_2015_%28cropped%29.jpg/440px-Palmer_Luckey%2C_2015_%28cropped%29.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Palmer_Luckey_Stage_Microphone.png/440px-Palmer_Luckey_Stage_Microphone.png",
         role: "Oculus Founder, Anduril CEO",
         type: "ceo",
         switchDate: "2016-09-22",
@@ -49,7 +49,7 @@ const timelineData = [
     {
         id: "elon-musk",
         name: "Elon Musk",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Elon_Musk_Royal_Society_%28crop2%29.jpg/440px-Elon_Musk_Royal_Society_%28crop2%29.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Elon_Musk_-_54820081119_%28cropped%29.jpg/440px-Elon_Musk_-_54820081119_%28cropped%29.jpg",
         role: "Tesla/SpaceX/X CEO",
         type: "ceo",
         switchDate: "2022-05-18",
@@ -83,7 +83,7 @@ const timelineData = [
     {
         id: "david-sacks",
         name: "David Sacks",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/David_O._Sacks_in_2024_%28cropped%29.jpg/440px-David_O._Sacks_in_2024_%28cropped%29.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/e/ea/David_Sacks_in_March_2025.jpg",
         role: "Craft Ventures, All-In Pod",
         type: "vc",
         switchDate: "2022-06-01",
@@ -102,7 +102,7 @@ const timelineData = [
     {
         id: "marc-andreessen",
         name: "Marc Andreessen",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Marc_Andreessen-2.jpg/440px-Marc_Andreessen-2.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Marc_Andreessen-9_%28cropped%29.jpg/440px-Marc_Andreessen-9_%28cropped%29.jpg",
         role: "a16z Co-Founder",
         type: "vc",
         switchDate: "2023-10-16",
@@ -142,7 +142,7 @@ const timelineData = [
     {
         id: "chamath",
         name: "Chamath Palihapitiya",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Chamath_Palihapitiya_in_2024.png/440px-Chamath_Palihapitiya_in_2024.png",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Chamath_Palihapitiya_in_2025.jpg/440px-Chamath_Palihapitiya_in_2025.jpg",
         role: "Social Capital, All-In Pod",
         type: "vc",
         switchDate: "2024-01-15",
@@ -161,7 +161,7 @@ const timelineData = [
     {
         id: "ben-horowitz",
         name: "Ben Horowitz",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Ben_Horowitz%2C_2012_%28cropped%29.jpg/440px-Ben_Horowitz%2C_2012_%28cropped%29.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/TechCrunch_Disrupt_San_Francisco_2018_-_day_2_%2842713740520%29_%28cropped%29.jpg/440px-TechCrunch_Disrupt_San_Francisco_2018_-_day_2_%2842713740520%29_%28cropped%29.jpg",
         role: "a16z Co-Founder",
         type: "vc",
         switchDate: "2024-07-16",
@@ -185,7 +185,7 @@ const timelineData = [
     {
         id: "mark-zuckerberg",
         name: "Mark Zuckerberg",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg/440px-Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/8/8d/F20250904AH-2824_%2854778373111%29_%28cropped%29.jpg",
         role: "Meta CEO",
         type: "ceo",
         switchDate: "2024-08-26",
@@ -238,7 +238,7 @@ const timelineData = [
     {
         id: "sundar-pichai",
         name: "Sundar Pichai",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Sundar_Pichai_-_2023_%28cropped%29.jpg/440px-Sundar_Pichai_-_2023_%28cropped%29.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Sundar_Pichai_-_2023_%28cropped%29.jpg/440px-Sundar_Pichai_-_2023_%28cropped%29.jpg",
         role: "Alphabet/Google CEO",
         type: "ceo",
         switchDate: "2024-12-12",
@@ -257,7 +257,7 @@ const timelineData = [
     {
         id: "tim-cook",
         name: "Tim Cook",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Tim_Cook_%282017%2C_cropped%29.jpg/440px-Tim_Cook_%282017%2C_cropped%29.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/P20250806MR-0248_President_Donald_Trump_delivers_investment_remarks_alongside_Apple_CEO_Tim_Cook_%28cropped%29.jpg/440px-P20250806MR-0248_President_Donald_Trump_delivers_investment_remarks_alongside_Apple_CEO_Tim_Cook_%28cropped%29.jpg",
         role: "Apple CEO",
         type: "ceo",
         switchDate: "2025-01-20",
@@ -276,7 +276,7 @@ const timelineData = [
     {
         id: "satya-nadella",
         name: "Satya Nadella",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Satya_Nadella_2023_%28cropped%29.jpg/440px-Satya_Nadella_2023_%28cropped%29.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/MS-Exec-Nadella-Satya-2017-08-31-22_%28cropped%29.jpg/440px-MS-Exec-Nadella-Satya-2017-08-31-22_%28cropped%29.jpg",
         role: "Microsoft CEO",
         type: "ceo",
         switchDate: "2025-01-20",
@@ -295,7 +295,7 @@ const timelineData = [
     {
         id: "sam-altman",
         name: "Sam Altman",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Sam_Altman_TechCrunch_SF_2019_Day_2_Oct_3_%28cropped%29.jpg/440px-Sam_Altman_TechCrunch_SF_2019_Day_2_Oct_3_%28cropped%29.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Sam_Altman_TechCrunch_SF_2019_Day_2_Oct_3_%28cropped%29.jpg/440px-Sam_Altman_TechCrunch_SF_2019_Day_2_Oct_3_%28cropped%29.jpg",
         role: "OpenAI CEO",
         type: "ceo",
         switchDate: "2025-01-20",
@@ -319,7 +319,7 @@ const timelineData = [
     {
         id: "shou-chew",
         name: "Shou Zi Chew",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Shou_Zi_Chew_at_TikTok_Congressional_Hearing.png/440px-Shou_Zi_Chew_at_TikTok_Congressional_Hearing.png",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/TikTok_CEO_Shou_Zi_Chew.jpg/440px-TikTok_CEO_Shou_Zi_Chew.jpg",
         role: "TikTok CEO",
         type: "ceo",
         switchDate: "2025-01-20",
@@ -343,7 +343,7 @@ const timelineData = [
     {
         id: "joe-lonsdale",
         name: "Joe Lonsdale",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Joe_Lonsdale_%28cropped%29.jpg/440px-Joe_Lonsdale_%28cropped%29.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Joe_Lonsdale.jpg/440px-Joe_Lonsdale.jpg",
         role: "8VC, Palantir Co-Founder",
         type: "vc",
         switchDate: "2020-06-01",
@@ -367,7 +367,7 @@ const timelineData = [
     {
         id: "dara-khosrowshahi",
         name: "Dara Khosrowshahi",
-        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Dara_Khosrowshahi_in_2018.jpg/440px-Dara_Khosrowshahi_in_2018.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/CEO_of_Uber_Technologies_Dara_Khosrowshahi_in_New_York_-_2019_%28cropped%29.jpg/440px-CEO_of_Uber_Technologies_Dara_Khosrowshahi_in_New_York_-_2019_%28cropped%29.jpg",
         role: "Uber CEO",
         type: "ceo",
         switchDate: "2025-01-20",

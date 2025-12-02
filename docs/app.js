@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function renderMajorEvents() {
         if (typeof majorEvents === 'undefined') return;
 
-        const timelineEl = document.getElementById('timeline');
+        const timelinePointsEl = document.getElementById('timeline-points');
 
         majorEvents.forEach(event => {
             const eventDate = new Date(event.date);
@@ -248,7 +248,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const eventLine = document.createElement('div');
             eventLine.className = 'major-event-line';
-            eventLine.style.left = `calc(80px + ${xPercent}% * (100% - 160px) / 100)`;
+            eventLine.style.left = `${xPercent}%`;
             eventLine.style.setProperty('--event-color', event.color);
 
             const label = document.createElement('span');
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', function() {
             label.style.backgroundColor = event.color;
             eventLine.appendChild(label);
 
-            timelineEl.appendChild(eventLine);
+            timelinePointsEl.appendChild(eventLine);
         });
     }
 
