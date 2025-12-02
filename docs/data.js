@@ -53,7 +53,7 @@ const timelineData = [
         role: "Tesla/SpaceX/X CEO",
         type: "ceo",
         switchDate: "2022-05-18",
-        switchRank: 3,
+        switchRank: 4,
         switchEvent: "Announced he would vote Republican, began political shift accelerating through Twitter acquisition",
         company: "Tesla, SpaceX, X (Twitter)",
         bio: "The megaphone. COVID restrictions triggered shift. Bought Twitter, made it MAGA platform. Spent $100M+ on Trump 2024. Faced largest potential unrealized gains tax bill of any American. Now runs DOGE.",
@@ -77,7 +77,7 @@ const timelineData = [
         role: "Craft Ventures, All-In Pod",
         type: "vc",
         switchDate: "2022-06-01",
-        switchRank: 4,
+        switchRank: 5,
         switchEvent: "All-In podcast became increasingly political, anti-Democratic positioning",
         company: "Craft Ventures, PayPal (former)",
         bio: "Co-authored 'The Diversity Myth' with Thiel in 1995. All-In podcast political vehicle. Hosted Trump fundraiser. Now 'AI/Crypto Czar'.",
@@ -96,7 +96,7 @@ const timelineData = [
         role: "a16z Co-Founder",
         type: "vc",
         switchDate: "2023-10-16",
-        switchRank: 5,
+        switchRank: 6,
         switchEvent: "Published 'Techno-Optimist Manifesto' explicitly naming DEI, ESG as enemies",
         company: "Andreessen Horowitz (a16z)",
         bio: "The ideologist. Netscape founder. Manifesto declared war on 'woke'. 'Little Tech Agenda' called Harris unrealized gains tax 'the death of startups'. Explicit Trump endorsement.",
@@ -130,7 +130,7 @@ const timelineData = [
         role: "Social Capital, All-In Pod",
         type: "vc",
         switchDate: "2024-01-15",
-        switchRank: 6,
+        switchRank: 7,
         switchEvent: "Increasingly right-wing podcast positions, Vivek Ramaswamy alliance",
         company: "Social Capital",
         bio: "The provocateur. Former Facebook exec who criticized it. SPAC disasters. 'Nobody cares about Uyghurs' comments. All-In radicalization.",
@@ -149,7 +149,7 @@ const timelineData = [
         role: "a16z Co-Founder",
         type: "vc",
         switchDate: "2024-07-16",
-        switchRank: 7,
+        switchRank: 8,
         switchEvent: "Co-endorsed Trump with Andreessen, despite historical Democratic donations",
         company: "Andreessen Horowitz (a16z)",
         bio: "The reluctant convert. Previously donated to Democrats. Co-authored 'Little Tech Agenda' warning Harris tax would 'kill startups'. Framed Trump support as policy necessity.",
@@ -173,7 +173,7 @@ const timelineData = [
         role: "Meta CEO",
         type: "ceo",
         switchDate: "2024-08-26",
-        switchRank: 8,
+        switchRank: 9,
         switchEvent: "Letter to Jim Jordan regretting COVID 'censorship', signaling major policy shift",
         company: "Meta (Facebook, Instagram, WhatsApp)",
         bio: "The transformation. From Trump ban to Mar-a-Lago dinner. Killed DEI, fact-checking. 'Masculine energy' comments. $1M inaugural donation.",
@@ -202,7 +202,7 @@ const timelineData = [
         role: "Amazon Founder, WaPo Owner",
         type: "ceo",
         switchDate: "2024-10-25",
-        switchRank: 9,
+        switchRank: 10,
         switchEvent: "Blocked Washington Post from endorsing Kamala Harris, breaking tradition",
         company: "Amazon, Blue Origin, Washington Post",
         bio: "The pragmatist. Blocked his own newspaper's endorsement. Attended inauguration. AWS government contracts a factor.",
@@ -226,7 +226,7 @@ const timelineData = [
         role: "Alphabet/Google CEO",
         type: "ceo",
         switchDate: "2024-12-12",
-        switchRank: 10,
+        switchRank: 11,
         switchEvent: "Met with Trump at Mar-a-Lago as part of tech CEO outreach",
         company: "Alphabet (Google, YouTube)",
         bio: "The quiet pivot. From employee walkout days to firing Palestine protesters. Lost antitrust case, needs Trump DOJ leniency.",
@@ -245,7 +245,7 @@ const timelineData = [
         role: "Apple CEO",
         type: "ceo",
         switchDate: "2025-01-20",
-        switchRank: 11,
+        switchRank: 12,
         switchEvent: "Attended Trump inauguration in prominent position",
         company: "Apple",
         bio: "The survivor. Has worked with every administration. Inauguration attendance despite privacy/values marketing. China business priority.",
@@ -264,7 +264,7 @@ const timelineData = [
         role: "Microsoft CEO",
         type: "ceo",
         switchDate: "2025-01-20",
-        switchRank: 12,
+        switchRank: 13,
         switchEvent: "Attended Trump inauguration",
         company: "Microsoft",
         bio: "The pragmatist. Less dramatic than others. Azure government contracts matter. Quiet alignment over confrontation.",
@@ -273,6 +273,97 @@ const timelineData = [
                 title: "Tech Billionaires at Trump Inauguration",
                 url: "https://www.bbc.com/news/articles/c62505z45g5o",
                 source: "BBC"
+            }
+        ]
+    },
+    {
+        id: "sam-altman",
+        name: "Sam Altman",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Sam_Altman_TechCrunch_SF_2019_Day_2_Oct_3_%28cropped%29.jpg/440px-Sam_Altman_TechCrunch_SF_2019_Day_2_Oct_3_%28cropped%29.jpg",
+        role: "OpenAI CEO",
+        type: "ceo",
+        switchDate: "2025-01-20",
+        switchRank: 14,
+        switchEvent: "Donated $1M personally to Trump inauguration fund, attended ceremony",
+        company: "OpenAI",
+        bio: "The AI kingmaker. Built ChatGPT empire. Personal $1M inauguration donation despite OpenAI's nonprofit origins. Needs regulatory favor for AGI ambitions.",
+        articles: [
+            {
+                title: "Sam Altman Donates $1M to Trump Inauguration",
+                url: "https://www.npr.org/2024/12/13/nx-s1-5227874/trump-bezos-zuckerberg-amazon-facebook-open-ai-meta-inauguration-fund",
+                source: "NPR"
+            },
+            {
+                title: "Tech CEOs at Trump Inauguration",
+                url: "https://www.cbsnews.com/news/trump-inauguration-who-is-invited-attending/",
+                source: "CBS News"
+            }
+        ]
+    },
+    {
+        id: "shou-chew",
+        name: "Shou Zi Chew",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Shou_Zi_Chew_at_TikTok_Congressional_Hearing.png/440px-Shou_Zi_Chew_at_TikTok_Congressional_Hearing.png",
+        role: "TikTok CEO",
+        type: "ceo",
+        switchDate: "2025-01-20",
+        switchRank: 15,
+        switchEvent: "Attended Trump inauguration days before potential TikTok ban, seated prominently",
+        company: "TikTok (ByteDance)",
+        bio: "The desperate diplomat. Singaporean CEO fighting US ban. Testified to Congress twice. Trump inauguration seat was survival politics—ban delayed 75 days after.",
+        articles: [
+            {
+                title: "TikTok CEO at Trump Inauguration",
+                url: "https://abcnews.go.com/Politics/mike-pence-joe-rogan-tech-ceos-attend-trumps/story?id=117888260",
+                source: "ABC News"
+            },
+            {
+                title: "Who Is TikTok CEO Shou Zi Chew",
+                url: "https://www.biography.com/business-leaders/a43412047/shou-zi-chew-tiktok-hearing",
+                source: "Biography"
+            }
+        ]
+    },
+    {
+        id: "joe-lonsdale",
+        name: "Joe Lonsdale",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Joe_Lonsdale_%28cropped%29.jpg/440px-Joe_Lonsdale_%28cropped%29.jpg",
+        role: "8VC, Palantir Co-Founder",
+        type: "vc",
+        switchDate: "2020-06-01",
+        switchRank: 3,
+        switchEvent: "Announced move from Silicon Valley to Austin, citing political climate",
+        company: "8VC, Palantir (co-founder), Cicero Institute",
+        bio: "The exile. Palantir co-founder who left SF for Austin. Stanford Review editor (like Thiel). Founded conservative Cicero Institute. Major Trump fundraiser.",
+        articles: [
+            {
+                title: "Why Palantir Co-Founder Joe Lonsdale Is Leaving Silicon Valley",
+                url: "https://www.cnbc.com/2020/11/06/palantir-co-founder-joe-lonsdale-leaving-silicon-valley.html",
+                source: "CNBC"
+            },
+            {
+                title: "Who's Who in Trump's Silicon Valley Entourage",
+                url: "https://www.siliconvalley.com/2024/12/23/whos-who-in-trumps-new-silicon-valley-entourage/",
+                source: "Silicon Valley"
+            }
+        ]
+    },
+    {
+        id: "dara-khosrowshahi",
+        name: "Dara Khosrowshahi",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Dara_Khosrowshahi_in_2018.jpg/440px-Dara_Khosrowshahi_in_2018.jpg",
+        role: "Uber CEO",
+        type: "ceo",
+        switchDate: "2025-01-20",
+        switchRank: 16,
+        switchEvent: "Attended Trump inauguration",
+        company: "Uber",
+        bio: "The pragmatic immigrant. Iranian-American CEO. Quietly attended inauguration despite Trump's past immigration policies. Gig economy regulation stakes.",
+        articles: [
+            {
+                title: "Tech CEOs Attend Trump Inauguration",
+                url: "https://www.entrepreneur.com/business-news/tech-business-leaders-attending-trumps-inauguration-list/485804",
+                source: "Entrepreneur"
             }
         ]
     }
